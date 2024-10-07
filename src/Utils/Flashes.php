@@ -11,6 +11,9 @@ class Flashes
     ) {
     }
 
+    /**
+     * @phpstan-assert-if-true !null $this->get()
+     */
     public function has(string $key): bool
     {
         return self::get($key, pop: false) !== [];

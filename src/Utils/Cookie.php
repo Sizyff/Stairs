@@ -20,6 +20,9 @@ class Cookie
     ) {
     }
 
+    /**
+     * @phpstan-assert-if-true !null $this->get()
+     */
     public function has(string $name): bool
     {
         return isset($_COOKIE[$name]);

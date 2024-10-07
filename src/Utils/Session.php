@@ -11,6 +11,9 @@ class Session
     /** @var array<string, mixed> */
     protected array $data = [];
 
+    /**
+     * @phpstan-assert-if-true !null $this->get()
+     */
     public function has(string $key): bool
     {
         return isset($this->data[$key]);
